@@ -23,7 +23,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User</title>
+    <title>User</title> <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -118,8 +120,8 @@ function myFunction() {
 
   
  
-   <div style="width:800px; height:600px; padding:20px;  border: 10px solid #787878">
-<div style="width:750px; height:550px; padding:20px;  border: 5px solid #787878">
+   <div style="width:800px; height:900px; padding:20px;  border: 10px solid #787878">
+<div style="width:750px; height:850px; padding:20px;  border: 5px solid #787878">
       <div style="text-align:center">
         <img src="np.png" width="100" height="100"><br>
            <span style="font-size:18px">Government of Nepal</span><br>
@@ -138,20 +140,31 @@ $result=mysqli_query($connection,$query);
 if ($result) {
   while ($row = mysqli_fetch_array($result)) {
 
+echo" <br>This is to certify that ,<br><br> <u> <b> ".$row['d2']."<b> </u> Daughter/Son of <u>".$row['f1']."</u> Date of Birth <u>".$row['f1']."</u>
+is Married with <u>".$row['f1']."</u> Daughter/Son of <u>".$row['f1']."</u> Date of Birth <u>".$row['f1']."</u> held on <u>".$row['d1']."</u>. 
+Registered in my office with Registration serial no <u>".$row['RegNo']."</u> In <u>".$row['date']."</u> Kathmandu Ward No 11. I wish them a Happy Married Life.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-    echo "
-This is Certify That        <u>  ".$row['d2']." </u>     Son of................<u>".$row['f1']."</u>.......................
+_____________________________
+<br>Sincerely,<br>
+Marriage Registration Officer<br>
+Kathmandu Ward No.11,<br>
+Nepal
+"
 
-Date of Birth .....<u>".$row['f1']."</u>..........Married with……………...........<u>".$row['f1']."</u>........................
-Daughter/Son of……………………<u>".$row['f1']."</u>……………..
-Date of Birth……<u>".$row['f1']."</u>……………. The Marriage was Solemnized on……<u>".$row['d1']."</u>……… and Registeredin my office being Registration serial no……<u>".$row['RegNo']."</u>……. In ……<u>".$row['date']."</u>……… Registrar Address.
-I wish them every success in life.
 
-</span><br/><br/><br/>
-";}}
+;}}
 ?>
 
 
+</span><br/><br/><br/>
 
 
                                        

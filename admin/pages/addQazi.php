@@ -10,7 +10,9 @@
     <meta name="author" content="">
 
     <title>Admin</title>
-
+    <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
 
     <?php  
    session_start();
@@ -87,12 +89,7 @@
                         <li>
                             <a href="qazitable.php"><i class="fa fa-table fa-fw"></i> Staff Details </a>
                         </li>
-                        <!-- <li>
-                            <a href="review.php"><i class="fa fa-table fa-fw"></i> Review Registration </a>
-                        </li>
-                        <li>
-                            <a href="divorceList.php"><i class="fa fa-table fa-fw"></i> Divorce List </a>
-                        </li> -->
+               
                         <li>
                             <a href="logout.php"><i class="fa fa-table fa-fw"></i> LogOut </a>
                         </li>
@@ -110,7 +107,7 @@
         <div id="page-wrapper">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Add Kazi</h1>
+                    <h1 class="page-header">Add Registration Officer</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -123,17 +120,17 @@
                         <form method="POST" >
 
                           <div class="form-group text-center">
-                            <label for="exampleInputPassword1"><h4><b>Qazi Registration Number</b> </h4></label>
+                            <label for="exampleInputPassword1"><h4><b>Registration Officer Registration Number</b> </h4></label>
                             <input type="text" name="RegID" class="form-control" id="exampleInputPassword1" placeholder="Govt Registraion Number" required="">
                         </div>
                         <div class="form-group text-center">
-                            <label for="exampleInputEmail1"><h4><b>Qazi Email address</b></h4> </label>
+                            <label for="exampleInputEmail1"><h4><b>Registration Officer Email address</b></h4> </label>
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email " required="">
 
                         </div>
                         <div class="form-group">
                             <div class=col-sm-10">
-                                <button type="submit" name="btn" class="btn btn-success btn-block"><h4><b> Save Qazi  Information</b></h4></button>
+                                <button type="submit" name="btn" class="btn btn-success btn-block"><h4><b> Save Registration Officer  Information</b></h4></button>
                             </div>
                         </div>
                     </form>

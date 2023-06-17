@@ -24,7 +24,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Registration Officer Page</title>
+    <title>Registration Officer Page</title> <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -84,6 +86,9 @@
                        
                         <li>
                             <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marrage Registration </a>
+                        </li>
+                        <li>
+                            <a href="gaymarriageRegistration.php"><i class="fa fa-table fa-fw"></i> Gay Marrage Registration </a>
                         </li>
                         <li>
                             <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>

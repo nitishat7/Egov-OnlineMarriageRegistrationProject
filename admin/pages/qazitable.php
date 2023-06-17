@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Admin</title> <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
 <?php  
    session_start();
    $admin=$_SESSION["admin"] ;
@@ -106,7 +108,7 @@
     <div id="page-wrapper">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Kazi List</h1>
+                    <h1 class="page-header">Registration Officer List</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -122,8 +124,8 @@
   <thead class="text-center">
     <tr>
       <th>Reg. No:</th>
-      <th>Kazi  Name</th>
-      <th> Kazi Email</th>
+      <th>Registration Officer  Name</th>
+      <th> Registration Officer Email</th>
       <th>Action</th>
     </tr>
   </thead>

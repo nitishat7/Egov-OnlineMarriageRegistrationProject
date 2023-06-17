@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>BD Marriage Site</title>
+  <title>Marriage Registration 11</title>    <link rel = "icon" href = 
+"img/np.png" 
+        type = "image/x-icon">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">

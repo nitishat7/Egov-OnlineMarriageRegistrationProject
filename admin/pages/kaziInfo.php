@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Admin</title> <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
 <?php  
    session_start();
    $admin=$_SESSION["admin"] ;
@@ -51,7 +53,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <img src="admin.jpg" alt="" style="height:50px; width:50px;"><b>Admin Page <b><nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -59,7 +61,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Admin</a>
+                <a class="navbar-brand" href="index.php"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -74,23 +76,22 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         </br>
-                         <li>
-                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>
-                       
                         <li>
-                            <a href="addQazi.php"><i class="fa fa-table fa-fw"></i> Add Qazi </a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Details</a>
                         </li>
+
                         <li>
-                            <a href="qazitable.php"><i class="fa fa-table fa-fw"></i> Qazi List </a>
+                            <a href="addQazi.php"><i class="fa fa-table fa-fw"></i> Staff Login</a>
                         </li>
                         <li>
+                            <a href="qazitable.php"><i class="fa fa-table fa-fw"></i> Staff Details </a>
+                        </li>
+                        <!-- <li>
                             <a href="review.php"><i class="fa fa-table fa-fw"></i> Review Registration </a>
                         </li>
                         <li>
                             <a href="divorceList.php"><i class="fa fa-table fa-fw"></i> Divorce List </a>
-                        </li>
-                        
+                        </li> -->
                         <li>
                             <a href="logout.php"><i class="fa fa-table fa-fw"></i> LogOut </a>
                         </li>
@@ -106,7 +107,7 @@
     <div id="page-wrapper">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Kazi Information</h1>
+                    <h1 class="page-header">Registration Officer Information</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -147,21 +148,23 @@ if(isset($_GET['kazi_id'])){
   
   <tbody>
     <tr>
-      <th>Kazi Name: </th>
+      <th>Registration Officer Name: </th>
       <td>$kazi_name</td>
      
       
     </tr>
     <tr>
-      <th>Kazi Reg. No: </th>
+      <th>Registration Officer Reg. No: </th>
       <td> $kazi_Rid</td>
       
     </tr>
     <tr>
-      <th>Kazi E-mail</th>
+      <th>Registration Officer E-mail</th>
       
       <td>$kazi_email</td>
     </tr>
+
+    
     
   </tbody>
 

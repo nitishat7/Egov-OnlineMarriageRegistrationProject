@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Admin</title> <link rel = "icon" href = 
+"img/np.png" 
+        type = "image/x-icon">
     <?php  
    session_start();
    $admin=$_SESSION["admin"] ;

@@ -24,7 +24,9 @@
     <meta name="author" content="">
 
     <title>Register Officer Page</title>
-
+    <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -74,7 +76,7 @@
             
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            <div class="navbar-default sidebar" role="navigation" class="col-lg-12">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                        
@@ -86,11 +88,12 @@
                             <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marrage Registration </a>
                         </li>
                         <li>
+                            <a href="gaymarriageRegistration.php"><i class="fa fa-table fa-fw"></i> Gay Marriage Registration </a>
+                        </li>
+                        <li>
                             <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>
                         </li>
-                        <!-- <li>
-                            <a href=""><i class="fa fa-table fa-fw"></i> Divorce </a>
-                        </li> -->
+                      
                          <li>
                             <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut </a>
                         </li>

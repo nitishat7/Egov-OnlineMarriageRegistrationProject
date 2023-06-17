@@ -24,7 +24,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kazi Page</title>
+    <title>Registration Details</title> <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -63,7 +65,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Kazi</a>
+                <a class="navbar-brand" href="index.php"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -74,23 +76,24 @@
             
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            <img src="np.png" alt="NP Govt" ><b>Civil Marriage Registration Officer <b><div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         </br>
                          <li>
-                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Registraion Details</a>
                         </li>
                        
                         <li>
                             <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marrage Registration </a>
                         </li>
                         <li>
-                            <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>
+                            <a href="gaymarriageRegistration.php"><i class="fa fa-table fa-fw"></i>Gay Marrage Registration </a>
                         </li>
                         <li>
-                            <a href=""><i class="fa fa-table fa-fw"></i> Divorce </a>
+                            <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>
                         </li>
+                        
                          <li>
                             <a href="logout.php"><i class="fa fa-table fa-fw"></i> LogOut </a>
                         </li>
@@ -139,7 +142,6 @@ if(isset($_GET['marrage_id'])){
   $registration_id=$row['id'];
   $registration_sname=$row['d2'];
   $registration_dname=$row['d4'];
-
   $registration_date=$row['date'];
   $registration_RegNo=$row['RegNo'];
   $registration_ages=$row['d3'];
@@ -179,16 +181,30 @@ if(isset($_GET['marrage_id'])){
       
     </tr>
     <tr>
-      <th>Age of Bridegroom</th>
+      <th>Age of Groom/Dulah</th>
       
       <td>$registration_ages</td>
     </tr>
     <tr>
-      <th>Age of the Bride</th>
+      <th>Age of the Bride/Dulahi</th>
       
+    
       <td>$registration_aged</td>
     </tr>
+    <tr>
+      <th> Photo of the Groom/Dulah: </th>
     
+      <td><img src='../../qazi/pages/".$row['photoH']."'width='100px' height='100px'/></td>
+     
+      
+    </tr>
+    <tr>
+      <th> Photo of the Bride/Dulahi: </th>
+      <td><img src='../../qazi/pages/".$row['photoW']."'width='100' height='100'/></td>
+     
+      
+    </tr>
+   
   </tbody>
 
   ";

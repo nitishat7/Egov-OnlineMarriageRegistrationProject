@@ -95,13 +95,13 @@
                        
                         <li>
                             <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marrage Registration </a>
-                        </li> <li>
+                        </li>
+                        <li>
                             <a href="gaymarriageRegistration.php"><i class="fa fa-table fa-fw"></i> Gay Marrage Registration </a>
                         </li>
                         <li>
                             <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>
                         </li>
-                        
                        
                         
                          <li>
@@ -119,7 +119,7 @@
     <div id="page-wrapper">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Marage Registration Form</h1>
+                    <h1 class="page-header">Same-Sex Marriage Registration Form</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -131,7 +131,7 @@
           <table>
             <tbody>
              <form method="POST"  enctype="multipart/form-data">
-             <h4><b>Groom/Dulaha Details </b></h4>
+             <h4><b>Applicant 1 Details </b></h4>
   <div class="form-group">
     <label for="exampleInputPassword1"><h4><b>1. District/Ward No  </b></h4> </label>
     <input type="text" class="form-control" name="d1" id="exampleInputPassword1" placeholder="Eg. Kathmandu Ward No 11" required="" >
@@ -139,97 +139,99 @@
   </div>
   
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>2. Name of the Groom/Dulaha  </b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>2. Applicant Name  </b></h4> </label>
     <input type="text" class="form-control" name="d2" id="exampleInputPassword1" placeholder="Eg. Junga Bahadur"  required="">
   </div>
   
 
   <div class="form-group">
-  <label for="exampleInputPassword1"><h4><b>3. Photo of Groom/Dulaha </b></h4> </label>
+  <label for="exampleInputPassword1"><h4><b>3. Photo of Applicant </b></h4> </label>
     <input type="file" class="custom-file-input" name="p1" id="exampleInputPassword1" placeholder=""  required="">
 
   </div>
   
 
   <div class="form-group">
-  <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>6. CitizenShip NO. of Groom/Dulaha's:</b></h4> </label>
-    <input type="number" class="form-control" name="d3" id="exampleInputPassword1" placeholder="" required="">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>6. Contact Number Groom/Dulaha's:</b></h4> </label>
-    <input type="number" class="form-control" name="d3" id="exampleInputPassword1" placeholder="" required="">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>6. Email Groom/Dulaha's:</b></h4> </label>
-    <input type="email" class="form-control" name="d3" id="exampleInputPassword1" placeholder="johndoe@gmail.com" required="">
-  </div>
+    
 
-    <label for="exampleInputPassword1"><h4><b>4. Groom/Dulaha's Father’s Full-Name</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>4. Applicant's Father’s Full-Name</b></h4> </label>
     <input type="text" class="form-control" id="next1" name="f1" id="exampleInputPassword1" placeholder="Eg. Junga Bahadur"  required="">
   
     </div>
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>5. Permanent Address of Groom/Dulaha's:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>5. Permanent Address of Applicant:</b></h4> </label>
     <input type="text" class="form-control" name="a1" id="exampleInputPassword1" placeholder="Eg. Gaushala, Kathmandu"  required="">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>5. Temporary Address of Groom/Dulaha's:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>5. Temporary Address of Applicant:</b></h4> </label>
     <input type="text" class="form-control" name="a1" id="exampleInputPassword1" placeholder="Eg. Gaushala, Kathmandu"  required="">
   </div>
     <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>6.Age of Groom/Dulaha's:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>6.Age of Applicant:</b></h4> </label>
     <input type="number" class="form-control" name="d3" id="exampleInputPassword1" placeholder="" required="">
   </div>
+  <div class="form-group">
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>6. CitizenShip NO. of Applicant:</b></h4> </label>
+    <input type="number" class="form-control" name="d3" id="exampleInputPassword1" placeholder="" required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>6. Contact Number Applicant:</b></h4> </label>
+    <input type="number" class="form-control" name="d3" id="exampleInputPassword1" placeholder="" required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>6. Email Applicant:</b></h4> </label>
+    <input type="email" class="form-control" name="d3" id="exampleInputPassword1" placeholder="johndoe@gmail.com" required="">
+  </div>
 
-  <h4><b>Bride/Dulahi Details </b></h4>
+  <h4><b>Applicant 2 Details </b></h4>
 
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>1. Name of the Bride/Dulahi :</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>1. Applicant Name  :</b></h4> </label>
     <input type="text" class="form-control" name="d4" id="exampleInputPassword1" placeholder="Eg. Sita Chhetri"required="">
   </div>
 
 
   <div class="form-group">
-  <label for="exampleInputPassword1"><h4><b>2. Photo of Bride/Dulahi </b></h4> </label>
+  <label for="exampleInputPassword1"><h4><b>2. Photo of Applicant </b></h4> </label>
     <input type="file" class="custom-file-input" name="p2" id="exampleInputPassword1" placeholder=""  required="">
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>3. Bride/Dulahi's  Father’s name :</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>3. Applicant's  Father’s name :</b></h4> </label>
     <input type="text" class="form-control" name="f2" id="exampleInputPassword1" placeholder="Eg. Junga Bahadur" required="">
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>4.Temporary Address of Bride/Dulahi's:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>4.Temporary Address of Applicant:</b></h4> </label>
     <input type="text" class="form-control" name="a2" id="exampleInputPassword1" placeholder="" required="">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>4.Permanent Address of Bride/Dulahi's:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>4.Permanent Address of Applicant:</b></h4> </label>
     <input type="text" class="form-control" name="a2" id="exampleInputPassword1" placeholder="" required="">
   </div>
 
 
 <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>5. Age of the bride:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>5. Age of the Applicant:</b></h4> </label>
     <input type="number" class="form-control"  name="d6" id="exampleInputPassword1" placeholder="" required="">
   </div>
-
   <div class="form-group">
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>6. CitizenShip NO. of Bride/Dulahi:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>6. CitizenShip NO. of Applicant:</b></h4> </label>
     <input type="number" class="form-control" name="d3" id="exampleInputPassword1" placeholder="" required="">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>6. Contact Number Bride/Dulahi:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>6. Contact Number Applicant:</b></h4> </label>
     <input type="number" class="form-control" name="d3" id="exampleInputPassword1" placeholder="" required="">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>6. Email Bride/Dulahi:</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>6. Email Applicant:</b></h4> </label>
     <input type="email" class="form-control" name="d3" id="exampleInputPassword1" placeholder="johndoe@gmail.com" required="">
   </div>
 
-  <h4><b>Groom/Dulaha Witness Details </b></h4>
+
+  <h4><b>Applicant 1 Witness Details </b></h4>
   <div class="form-group">
     <label for="exampleInputPassword1"><h4><b>1. Legal Witness </b></h4> </label>
     <input type="text" class="form-control" name="d7" id="exampleInputPassword1" placeholder="" required="">
@@ -266,7 +268,7 @@
     <input type="text" class="form-control" name="a2" id="exampleInputPassword1" placeholder="" required="">
   </div>
 
-  <h4><b>Bride/Dulahi Witness Details </b></h4>
+  <h4><b>Applicant 2 Witness Details </b></h4>
   <div class="form-group">
     <label for="exampleInputPassword1"><h4><b>1. Legal Witness </b></h4> </label>
     <input type="text" class="form-control" name="d7" id="exampleInputPassword1" placeholder="" required="">
@@ -310,15 +312,15 @@
 
 
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>First Marriage of Groom/Dulaha</b></h4> </label>
+    <label for="exampleInputPassword1"><h4><b>First Marriage of Applicant</b></h4> </label>
     <input type="checkbox" class="form-control" name="d21" id="exampleInputPassword1" placeholder="" required>Yes
     <input type="checkbox" class="form-control" name="d21" id="exampleInputPassword1" placeholder="" required>No
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1"><h4><b>First Marriage of Bride/Dulahi</b></h4> </label>
-    <input type="checkbox" class="form-control" name="d21" id="exampleInputPassword1" placeholder="" required>Yes
-    <input type="checkbox" class="form-control" name="d21" id="exampleInputPassword1" placeholder="" required>No
+    <label for="exampleInputPassword1"><h4><b>First Marriage of Applicant</b></h4> </label>
+    <input type="checkbox" class="form-control" name="d21" id="exampleInputPassword1" placeholder="" >Yes
+    <input type="checkbox" class="form-control" name="d21" id="exampleInputPassword1" placeholder="" >No
   </div>
 
 

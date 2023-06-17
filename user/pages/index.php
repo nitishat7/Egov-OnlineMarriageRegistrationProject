@@ -24,7 +24,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User</title>
+    <title>User</title>  <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

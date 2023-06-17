@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Admin</title> <link rel = "icon" href = 
+"np.png" 
+        type = "image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -100,7 +102,7 @@
     <div id="page-wrapper">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Add Qazi</h1>
+                    <h1 class="page-header">Add Register Officer</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -113,17 +115,17 @@
             <form>
   
   <div class="form-group text-center">
-    <label for="exampleInputPassword1"><h4><b>Qazi Registration Number</b> </h4></label>
+    <label for="exampleInputPassword1"><h4><b>Register Officer Registration Number</b> </h4></label>
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Govt Registraion Number">
   </div>
   <div class="form-group text-center">
-    <label for="exampleInputEmail1"><h4><b>Qazi Email address</b></h4> </label>
+    <label for="exampleInputEmail1"><h4><b>Register Officer Email address</b></h4> </label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email ">
    
   </div>
   <div class="form-group">
                 <div class=col-sm-10">
-                    <button type="submit" name="btn" class="btn btn-success btn-block"><h4><b> Save Qazi  Information</b></h4></button>
+                    <button type="submit" name="btn" class="btn btn-success btn-block"><h4><b> Save Register Officer  Information</b></h4></button>
                 </div>
             </div>
           </form>
