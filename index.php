@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
             <ul class="ward-notice-list">
             <strong>
             <li>
-							<a href="img\Bibaha Darta Faram.pdf">Bibaha Darta Faram । बिबाह दार्त फराम <br>( सबै वडा कार्यालय, का.म.पा)</a>
+							<a href="img\Bibaha Darta Faram.pdf" target="_blank">Bibaha Darta Faram । बिबाह दार्त फराम <br>( सबै वडा कार्यालय, का.म.पा)</a>
 							<br><br>
 
 						</li><br>

@@ -28,7 +28,7 @@
 <meta name="author" content="">
 
 <title>Marriage Registration</title><link rel = "icon" href = 
-"img/np.png" 
+"np.png" 
         type = "image/x-icon">
 
 <!-- Bootstrap Core CSS -->
@@ -88,10 +88,10 @@
                         </li>
 
                         <li>
-                            <a href="addQazi.php"><i class="fa fa-table fa-fw"></i> Staff Login</a>
+                            <a href="addStaff.php"><i class="fa fa-table fa-fw"></i> Staff Login</a>
                         </li>
                         <li>
-                            <a href="qazitable.php"><i class="fa fa-table fa-fw"></i> Staff Details </a>
+                            <a href="stafftable.php"><i class="fa fa-table fa-fw"></i> Staff Details </a>
                         </li>
                         <!-- <li>
                             <a href="review.php"><i class="fa fa-table fa-fw"></i> Review Registration </a>
@@ -100,7 +100,7 @@
                             <a href="divorceList.php"><i class="fa fa-table fa-fw"></i> Divorce List </a>
                         </li> -->
                         <li>
-                            <a href="logout.php"><i class="fa fa-table fa-fw"></i> LogOut </a>
+                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut </a>
                         </li>
                         
                         
@@ -134,7 +134,7 @@
                                     <div class="huge">
                                      <?php
                                      include "connection.php";
-                                     $query=("SELECT COUNT(*) as total FROM qazilist;");
+                                     $query=("SELECT COUNT(*) as total FROM registrationoffierlist;");
                                      $result=mysqli_query($connection,$query);
                                      $row = mysqli_fetch_array($result);
                                      echo $row['total'];
@@ -182,7 +182,7 @@
                     </div>
                     <a href="#">
                         <div class="panel-footer">
-                            <span class="pull-left">Total Marrage Registration</span>
+                            <span class="pull-left">Total Marriage Registration</span>
 
                             <div class="clearfix"></div>
                         </div>

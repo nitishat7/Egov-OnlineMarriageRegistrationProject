@@ -1,3 +1,18 @@
+<!-- 
+<?php  
+   session_start();
+   $d26=$_SESSION["Qid"] ;
+   
+   
+  if($_SESSION["Qid"]){
+
+  }
+  else{
+    echo '<script> location.replace("../../login.php"); </script>';
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,21 +24,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title> <link rel = "icon" href = 
+    <title>Registration Officer Page</title> <link rel = "icon" href = 
 "np.png" 
         type = "image/x-icon">
-<?php  
-   session_start();
-   $admin=$_SESSION["admin"] ;
-   
-   
-  if($admin=='admin'){
 
-  }
-  else{
-    echo '<script> location.replace("../../adminlogin.php"); </script>';
-  }
-   ?>
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -53,7 +57,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <img src="admin.jpg" alt="" style="height:50px; width:50px;"><b>Admin Page <b><nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <img src="np.png" alt="NP Govt" ><b>Civil Marriage Registration Officer <b><nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -77,23 +81,25 @@
                     <ul class="nav" id="side-menu">
                         </br>
                         <li>
-                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Details</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>  Registration Details</a>
                         </li>
-
+                       
                         <li>
-                            <a href="addQazi.php"><i class="fa fa-table fa-fw"></i> Staff Login</a>
-                        </li>
-                        <li>
-                            <a href="qazitable.php"><i class="fa fa-table fa-fw"></i> Staff Details </a>
-                        </li>
-                        <!-- <li>
-                            <a href="review.php"><i class="fa fa-table fa-fw"></i> Review Registration </a>
+                            <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marriage Registration </a>
+                        </li> <li>
+                            <a href="divorceRegistration.php"><i class="fa fa-table fa-fw"></i> Divorce  Application </a>
                         </li>
                         <li>
-                            <a href="divorceList.php"><i class="fa fa-table fa-fw"></i> Divorce List </a>
-                        </li> -->
+                            <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>
+                        </li>
                         <li>
-                            <a href="logout.php"><i class="fa fa-table fa-fw"></i> LogOut </a>
+                            <a href="DivorceRegistrationlist.php"><i class="fa fa-table fa-fw"></i> Divorce Application List </a>
+                        </li>
+                       
+                       
+                        
+                         <li>
+                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut </a>
                         </li>
                         
                       
@@ -107,91 +113,72 @@
     <div id="page-wrapper">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Registration Officer Information</h1>
+                    <h1 class="page-header">Divorce Application List</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
             <div class="row">
-<table class="table table-hover table-bordered">
-  
-  
+    <div class="col-lg-12">
+        <h3 class="text-center text-success"></h3>
+        <hr/>
 
+        <input type="text" id="myInput"  placeholder="Search for names.."  class="form-control">
 
-<?php
-
-include "connection.php";
-
-if(isset($_GET['kazi_id'])){
-  $kazi_id = $_GET['kazi_id'];
-  /*$_SESSION["bikeid"]=$product_id;*/
-  /*echo $product_id;*/
-  
-  $get_kazi = "select * from qazilist where id='$kazi_id'";
-  
-  $run_kazi = mysqli_query($connection, $get_kazi);
-  
-    
-  while($row=mysqli_fetch_array($run_kazi)){
-  
-  $kazi_id=$row['id'];
-  $kazi_Rid=$row['RegID'];
-  
-  $kazi_name=$row['name'];
-  $kazi_email=$row['email'];
-
-  
-  echo "
-
-
+<br>
+<table class="table table-bordered" >
+  <thead class="text-center">
+    <tr>
+      <th>Marriage Id:</th>
+       <th>Date</th>
+        <th>Groom/Dulaha's info</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="myTable">
  
-  
-  <tbody>
-    <tr>
-      <th>Registration Officer Name: </th>
-      <td>$kazi_name</td>
-     
-      
-    </tr>
-    <tr>
-      <th>Registration Officer Reg. No: </th>
-      <td> $kazi_Rid</td>
-      
-    </tr>
-    <tr>
-      <th>Registration Officer E-mail</th>
-      
-      <td>$kazi_email</td>
-    </tr>
 
-    
-    
-  </tbody>
+  <?php 
+include "connection.php";
+$mrid=$_SESSION["Qid"] ;
+$query=("select * from divorce where mrid='$mrid'");
+$result=mysqli_query($connection,$query);
+if ($result) {
+  while ($row = mysqli_fetch_array($result)) {
 
+$registration_id=$row['id'];
+    echo "
+    <tr>
+      <td>".$row['RegNo']."</td>
+      <td>".$row['date']."</td>
+      <td>".$row['d2']."</td>
+      
+      
+      <td>
+                <a href='marrageinfo.php?marrage_id=$registration_id' class='btn btn-info' title='Registration Details View'>
+                    <span class='glyphicon glyphicon-eye-open'></span>
+                </a>
+                
+                
+            </td> 
+    </tr>
   ";
-    
-  }
+  
   }
   
-    
-  
-    
-    
-
-
-
+}
+else{
+  echo "<h6 >NO RECORD FOUND</h6>";
+}
 ?>
 
+  </tbody>
 </table>
 
-                
-               
+    </div>
+</div>
             
-                       
-             </div>
-               
+
                 </div>
-               
 
 
 
@@ -238,4 +225,4 @@ $(document).ready(function(){
 
 </body>
 
-</html>
+</html> -->

@@ -105,7 +105,7 @@
               if(isset($_POST['button'])){
                 $RegID=$_POST['RegID'];
                 $password=hash('sha256', $_POST['password']);
-                $query=("select * from qazilist where RegID ='$RegID' and password ='$password' ");
+                $query=("select * from registrationoffierlist where RegID ='$RegID' and password ='$password' ");
                 $result=mysqli_query($connection,$query);
                 $row = mysqli_fetch_array($result);
                 if($row['RegID']==$RegID && $row['password']==$password && $row['RegID']!=null){
@@ -113,7 +113,7 @@
                   $_SESSION["Qemail"] = $row['email'];
 
                   
-                  echo '<script> location.replace("qazi/pages"); </script>';
+                  echo '<script> location.replace("registrationofficer/pages"); </script>';
                 }
                 else{
                   echo "<script>window.alert('Password Mismatch Or You Account is not Created')</script>";

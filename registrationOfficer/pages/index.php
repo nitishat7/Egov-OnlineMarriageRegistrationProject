@@ -1,7 +1,6 @@
-
 <?php  
    session_start();
-   $d26=$_SESSION["Qid"] ;
+   $admin=$_SESSION["Qid"] ;
    
    
   if($_SESSION["Qid"]){
@@ -10,7 +9,7 @@
   else{
     echo '<script> location.replace("../../login.php"); </script>';
   }
-?>
+   ?>
 
 
 <!DOCTYPE html>
@@ -24,10 +23,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Registration Officer Page</title> <link rel = "icon" href = 
+    <title>Register Officer Page</title>
+    <link rel = "icon" href = 
 "np.png" 
         type = "image/x-icon">
-
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -65,7 +64,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"></a>
+                
+                <a class="navbar-brand" href="index.html" ></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -76,116 +76,104 @@
             
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            <div class="navbar-default sidebar" role="navigation" class="col-lg-12">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        </br>
-                         <li>
-                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Registration Details</a>
+                       
+                    <li>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>  Registration Details</a>
                         </li>
                        
                         <li>
-                            <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marrage Registration </a>
-                        </li>
-                        <li>
-                            <a href="gaymarriageRegistration.php"><i class="fa fa-table fa-fw"></i> Gay Marrage Registration </a>
+                            <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marriage Registration </a>
+                        </li> <li>
+                            <a href="divorceRegistration.php"><i class="fa fa-table fa-fw"></i> Divorce  Application </a>
                         </li>
                         <li>
                             <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>
                         </li>
+                        <li>
+                            <a href="DivorceRegistrationlist.php"><i class="fa fa-table fa-fw"></i> Divorce Application List </a>
+                        </li>
+                       
+                       
                         
                          <li>
-                            <a href="logout.php"><i class="fa fa-table fa-fw"></i> LogOut </a>
+                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut </a>
                         </li>
+                        
                         
                         
                       
                        
                     </ul>
                 </div>
-             
+                <!-- /.sidebar-collapse -->
             </div>
-         
+            <!-- /.navbar-static-side -->
         </nav>
-    <div id="page-wrapper">
-            <div class="row text-center">
+
+        <div id="page-wrapper">
+            <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Registration List</h1>
+                    <h1 class="page-header">Registration Details</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
+            <!-- /.row -->
             <div class="row">
-    <div class="col-lg-12">
-        <h3 class="text-center text-success"></h3>
-        <hr/>
-
-        <input type="text" id="myInput"  placeholder="Search for names.."  class="form-control">
-
-<br>
-<table class="table table-bordered" >
-  <thead class="text-center">
-    <tr>
-      <th>Reg. No:</th>
-       <th>Date</th>
-        <th>Bridegroom's info</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody id="myTable">
- 
-
-<?php 
-include "connection.php";
-$d26=$_SESSION["Qid"] ;
-$query=("select * from marriagelist where d26='$d26'");
-$result=mysqli_query($connection,$query);
-if ($result) {
-  while ($row = mysqli_fetch_array($result)) {
-
-$registration_id=$row['id'];
-    echo "
-    <tr>
-      <td>".$row['RegNo']."</td>
-      <td>".$row['date']."</td>
-      <td>".$row['d2']."</td>
-      
-      
-      <td>
-                <a href='marrageinfo.php?marrage_id=$registration_id' class='btn btn-info' title='Registration Details View'>
-                    <span class='glyphicon glyphicon-eye-open'></span>
-                </a>
-                
-                
-            </td> 
-    </tr>
-  ";
-  
-  }
-  
-}
-else{
-  echo "<h6 >NO RECORD FOUND</h6>";
-}
-
-?>
-
-  </tbody>
-</table>
-
-    </div>
-</div>
-            
-
-                </div>
+                <div class=" col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-list fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                       <?php
+                                     include "connection.php";
+                                     $d26=$_SESSION["Qid"] ;
+                                     $query=("SELECT COUNT(*) as total FROM marriagelist where d26='$d26';");
+                                     $result=mysqli_query($connection,$query);
+                                     $row = mysqli_fetch_array($result);
+                                     echo $row['total'];
+                                     ?> 
 
 
 
 
-
-
-        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">Total Marriage Registration</span>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
                     </div>
-                   
+                </div>
+                
+                
+                
+            <!-- /.row -->
+            
+                        <!-- /.panel-footer -->
+                    </div>
+                    <!-- /.panel .chat-panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+         
+            <!-- /.row -->
+       </div>
+        <!-- /#page-wrapper -->
+
+   
+    <!-- /#wrapper -->
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -203,23 +191,6 @@ else{
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-    <script>
-    $(document).ready(function () {
-  $('#dtBasicExample').DataTable();
-  $('.dataTables_length').addClass('bs-select');
-});
-
-</script>
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
 
 </body>
 

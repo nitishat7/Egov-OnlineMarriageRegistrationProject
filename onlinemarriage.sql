@@ -124,10 +124,10 @@ INSERT INTO `marriagelist` (`id`, `date`, `RegNo`, `d1`, `d2`, `f1`, `a1`, `d3`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qazi`
+-- Table structure for table `registrationOfficer`
 --
 
-CREATE TABLE `qazi` (
+CREATE TABLE `registrationOfficer` (
   `id` int(11) NOT NULL,
   `RegID` text NOT NULL,
   `email` text NOT NULL
@@ -137,7 +137,7 @@ CREATE TABLE `qazi` (
 -- Dumping data for table `qazi`
 --
 
-INSERT INTO `qazi` (`id`, `RegID`, `email`) VALUES
+INSERT INTO `registrationOfficer` (`id`, `RegID`, `email`) VALUES
 (1, '5137', 'nahian15-5137@diu.edu.bd'),
 (2, '1234', 'a@gmail.com');
 
@@ -207,9 +207,9 @@ ALTER TABLE `marriagelist`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `qazi`
+-- Indexes for table `registrationOfficer`
 --
-ALTER TABLE `qazi`
+ALTER TABLE `registrationOfficer`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -249,7 +249,7 @@ ALTER TABLE `marriagelist`
 --
 -- AUTO_INCREMENT for table `qazi`
 --
-ALTER TABLE `qazi`
+ALTER TABLE `registrationOfficer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --

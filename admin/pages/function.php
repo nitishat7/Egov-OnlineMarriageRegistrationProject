@@ -4,7 +4,7 @@ $con = mysqli_connect("localhost","root","","onlinemarriage");
 
 function getkazi(){
 	global $con;
-	$get_kazi = "select * from qazilist";
+	$get_kazi = "select * from registrationoffierlist";
 	$run_kazi = mysqli_query($con,$get_kazi);
 	while ($row_kazi=mysqli_fetch_array($run_kazi)){
 	$kazi_id =$row_kazi['id'];

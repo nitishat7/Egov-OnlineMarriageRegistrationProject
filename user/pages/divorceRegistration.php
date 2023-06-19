@@ -1,3 +1,4 @@
+
 <?php  
    session_start();
    $Qid=$_SESSION["Cid"] ;
@@ -23,9 +24,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User</title> <link rel = "icon" href = 
-"np.png" 
-        type = "image/x-icon">
+    <title>User</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -75,35 +74,29 @@
             
             <!-- /.navbar-top-links -->
 
-            <img src="np.png" alt="NP Govt" ><b>Registered User Page <b><div class="navbar-default sidebar" role="navigation">
+            <img src="np.png" alt="NP Govt" ><b>Registerd User Page <b><div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         
-                         <li>
+                    <li>
                             <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Couple Information</a>
                         </li>
                        
-                        <li>
-                            <a href="Certificate.php"><i class="fa fa-table fa-fw"></i> Marriage Certificate</a>
-                        
-                        </li>
                         <!-- <li>
+                            <a href="Certificate.php"><i class="fa fa-table fa-fw"></i> Marrage Certificate</a>
+                        </li> -->
+                        <li>
                             <a href="divorceRegistration.php"><i class="fa fa-table fa-fw"></i> Application For Divorce</a>
                         </li>
-                         -->
-                        
                         <li>
-                            <a  onclick="myFunction()" style="cursor: pointer;"><script>
-                            function myFunction() {
-                                window.print();
-                                }
-                                </script>
-                           <l class="fa fa-print fa-fw" ></l>Print Certificate</a>
+                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut</a>
                         </li>
                         
-                        <li>
-                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i>logOut</a>
-                        </li>
+                        
+                        
+                        
+                        
+                      
                        
                     </ul>
                 </div>
@@ -113,81 +106,59 @@
         </nav>
 
         <div id="page-wrapper">
-            
-            <!-- /.row -->
-            <div class="row">
-
-  
- 
-   <div style="width:800px; height:900px; padding:20px;  border: 10px solid #787878">
-<div style="width:750px; height:850px; padding:20px;  border: 5px solid #787878">
-      <div style="text-align:center">
-        <img src="np.png" width="100" height="100"><br>
-           <span style="font-size:18px">Government of Nepal</span><br>
-           <span style="font-size:30px;font-weight:bold">Ward No. 11 <br>Kathmandu,Municipality<br></span><br>
-           <b> Date of issue: <b> <span  id='date-time'></span><br>
-            <span style="font-size:50px; font-weight:bold; font-family:brush script mt""><u> Marriage Certificate</u></span><br>
-      </div>
-       
-       <div style="text-align:justify;">
-        <span style="font-size:18px ">
-            <?php 
-include "connection.php";
-$RegID=$_SESSION["Cid"] ;
-$query=("select * from marriagelist where RegNo ='$RegID'");
-$result=mysqli_query($connection,$query);
-if ($result) {
-  while ($row = mysqli_fetch_array($result)) {
-
-echo" <br>This is to certify that ,<br><br> <u> <b> ".$row['d2']."<b> </u> Daughter/Son of <u>".$row['f1']."</u> Age <u>".$row['d3']."</u>
-residence of <u>".$row['a1']."</u> is Married with <u>".$row['d4']."</u> Daughter/Son of <u>".$row['f2']."</u> Age <u>".$row['d6']."</u> residence of <u>".$row['a2']."</u> held on <u>".$row['d12']."</u>. 
-Registered in my office with Registration serial no <u>".$row['RegNo']."</u> on <u>".$row['d24']."</u> Kathmandu Ward No 11. I wish them a Happy Married Life.
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-_______________
-<br>Sincerely,<br>
-Marriage Registration Officer<br>
-Kathmandu Ward No.11,<br>
-Nepal
-"
-
-
-;}}
-?>
-
-
-</span><br/><br/><br/>
-
-
-                                       
-      </div>
-       
-       
-</div>
-</div>
-
-                
-       
-
-            
-                        
-                    </div>
-
-
-
-
-                    <!-- /.panel .chat-panel -->
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Divorce Application Form</h1>
                 </div>
-                <!-- /.col-lg-4 -->
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+    <div class="col-lg-12">
+        <h3 class="text-center text-success"></h3>
+        <hr/>
+        <div class="well">
+          
+             <form method="POST"  enctype="multipart/form-data">
+  
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>01.Name of the Groom/Dulaha </b></h4></label>
+    <input type="text" class="form-control" name="bridegroom_name" id="exampleInputPassword1" placeholder=""  required="">
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>02.The name of the Bride/Dulahi :</b></h4> </label>
+    <input type="text" class="form-control" name="bride_name" id="exampleInputPassword1" placeholder="" required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>03.Marriage Date:</b></h4> </label>
+    <input type="Date" class="form-control" name="mdate" id="exampleInputPassword1" placeholder=""  required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>04.Marriage Registration ID:</b></h4> </label>
+    <input type="text" class="form-control" name="mrid" id="exampleInputPassword1" placeholder=""  required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>05.Couples Address:</b></h4> </label>
+    <input type="text" class="form-control" name="caddress" id="exampleInputPassword1" placeholder=""  required="">
+  </div>
+  <div class="form-group">
+                <div class=col-sm-10">
+                    <button type="submit" name="btn" class="btn btn-success btn-block"><h4><b> Apply For Divorce</b></h4></button>
+                </div>
+</form>
+    
+
+
+            
+                       
+             </div>
+               
+                </div>
+               
          
-            <!-- /.row -->
+          
        </div>
         <!-- /#page-wrapper -->
 
@@ -212,10 +183,34 @@ Nepal
     <script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
-<script>
-var dt = new Date();
-document.getElementById('date-time').innerHTML=dt;
-</script>
-
 
 </html>
+<?php 
+include "connection.php";
+
+if(isset($_POST['btn'])){
+    $bridegroom_name= $_POST['bridegroom_name'];
+    $bride_name= $_POST['bride_name'];
+    $mdate= $_POST['mdate'];
+    $mrid= $_POST['mrid'];
+    $caddress= $_POST['caddress'];
+
+    $sql = "insert into divorce (bridegroom_name, bride_name,mdate,mrid,caddress)
+values ('$bridegroom_name', '$bride_name', '$mdate','$mrid','$caddress');";
+$result=mysqli_query($connection,$sql);
+                        if($result){
+                          echo "<script>window.alert('Data added')</script>";
+
+                                   }
+                        else{
+
+                          echo "<script>window.alert('Problem')</script>";
+
+
+                        }
+
+}
+
+               
+?>
+

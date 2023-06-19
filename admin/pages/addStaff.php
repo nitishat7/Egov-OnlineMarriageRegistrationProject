@@ -84,14 +84,14 @@
                         </li>
 
                         <li>
-                            <a href="addQazi.php"><i class="fa fa-table fa-fw"></i> Staff Login </a>
+                            <a href="addStaff.php"><i class="fa fa-table fa-fw"></i> Staff Login</a>
                         </li>
                         <li>
-                            <a href="qazitable.php"><i class="fa fa-table fa-fw"></i> Staff Details </a>
+                            <a href="stafftable.php"><i class="fa fa-table fa-fw"></i> Staff Details </a>
                         </li>
                
                         <li>
-                            <a href="logout.php"><i class="fa fa-table fa-fw"></i> LogOut </a>
+                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut </a>
                         </li>
                         
                         

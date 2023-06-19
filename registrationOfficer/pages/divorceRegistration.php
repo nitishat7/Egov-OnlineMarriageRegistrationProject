@@ -24,9 +24,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User</title>  <link rel = "icon" href = 
-"np.png" 
-        type = "image/x-icon">
+    <title>User</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -65,7 +63,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"></a>
+                <a class="navbar-brand" href="index.php">User</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -76,22 +74,30 @@
             
             <!-- /.navbar-top-links -->
 
-            <img src="np.png" alt="NP Govt" ><b>Registered User Page <b><div class="navbar-default sidebar" role="navigation">
+            <img src="np.png" alt="NP Govt" ><b>Civil Marriage Registration Officer <b><div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         
-                         <li>
-                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Couple Information</a>
+                    <li>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>  Registration Details</a>
                         </li>
                        
                         <li>
-                            <a href="Certificate.php"><i class="fa fa-table fa-fw"></i> Marrage Certificate</a>
+                            <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marriage Registration </a>
+                        </li> <li>
+                            <a href="divorceRegistration.php"><i class="fa fa-table fa-fw"></i> Divorce  Application </a>
                         </li>
                         <li>
-                            <a href="divorceRegistration.php"><i class="fa fa-table fa-fw"></i> Application For Divorce</a>
+                            <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>
                         </li>
+                        
                         <li>
-                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut</a>
+                            <a href="DivorceRegistrationlist.php"><i class="fa fa-table fa-fw"></i> Divorce Application List </a>
+                        </li>
+                       
+                        
+                         <li>
+                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut </a>
                         </li>
                         
                         
@@ -109,74 +115,48 @@
         <div id="page-wrapper">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Couple Information</h1>
+                    <h1 class="page-header">Divorce Application Form</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
             <div class="row">
-                
-               <table class="table table-hover table-bordered">
+    <div class="col-lg-12">
+        <h3 class="text-center text-success"></h3>
+        <hr/>
+        <div class="well">
+          
+             <form method="POST"  enctype="multipart/form-data">
   
-  <tbody>
-
-    <?php 
-include "connection.php";
-$RegID=$_SESSION["Cid"] ;
-$query=("select * from marriagelist where RegNo ='$RegID'");
-$result=mysqli_query($connection,$query);
-if ($result) {
-  while ($row = mysqli_fetch_array($result)) {
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>01.Name of the bridegroom </b></h4></label>
+    <input type="text" class="form-control" name="bridegroom_name" id="exampleInputPassword1" placeholder=""  required="">
+  </div>
 
 
-    echo "
-    <tr>
-      <th> Photo of the Groom/Dulaha: </th>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>02.The name of the bride :</b></h4> </label>
+    <input type="text" class="form-control" name="bride_name" id="exampleInputPassword1" placeholder="" required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>03.Marrage Date:</b></h4> </label>
+    <input type="Date" class="form-control" name="mdate" id="exampleInputPassword1" placeholder=""  required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>04.Marrage Registration ID:</b></h4> </label>
+    <input type="text" class="form-control" name="mrid" id="exampleInputPassword1" placeholder=""  required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4><b>05.Couples Address:</b></h4> </label>
+    <input type="text" class="form-control" name="caddress" id="exampleInputPassword1" placeholder=""  required="">
+  </div>
+  <div class="form-group">
+                <div class=col-sm-10">
+                    <button type="submit" name="btn" class="btn btn-success btn-block"><h4><b> Apply For Divorce</b></h4></button>
+                </div>
+</form>
     
-      <td><img src='../../registrationofficer/pages/".$row['photoH']."'width='100px' height='100px'/></td>
-     
-      
-    </tr>
-    <tr>
-      <th> Photo of the Bride/Dulahi: </th>
-      <td><img src='../../registrationofficer/pages/".$row['photoW']."'width='100' height='100'/></td>
-     
-      
-    </tr>
-    <tr>
-      <th> Name of the Groom/Dulaha: </th>
-      <td>".$row['d2']."</td>
-     
-      
-    </tr>
-    <tr>
-      <th> The name of Bride/Dulahi: </th>
-      <td>".$row['d4']."</td>
-     
-      
-    </tr>
-    <tr>
-      <th>Date of Marriage:</th>
-      <td>".$row['date']."</td>
-      
-    </tr>
-    <tr>
-      <th>Marriage Registration’s Id</th>
-      
-      <td>".$row['RegNo']."</td>
-    </tr>
-    ";
-    }
-  
-}
-else{
-  echo "<h6 >NO RECORD FOUND</h6>";
-}
 
-?>
-
-  </tbody>
-</table>
 
             
                        
@@ -212,3 +192,32 @@ else{
 </body>
 
 </html>
+<?php 
+include "connection.php";
+
+if(isset($_POST['btn'])){
+    $bridegroom_name= $_POST['bridegroom_name'];
+    $bride_name= $_POST['bride_name'];
+    $mdate= $_POST['mdate'];
+    $mrid= $_POST['mrid'];
+    $caddress= $_POST['caddress'];
+
+    $sql = "insert into divorce (bridegroom_name, bride_name,mdate,mrid,caddress)
+values ('$bridegroom_name', '$bride_name', '$mdate','$mrid','$caddress');";
+$result=mysqli_query($connection,$sql);
+                        if($result){
+                          echo "<script>window.alert('Data added')</script>";
+
+                                   }
+                        else{
+
+                          echo "<script>window.alert('Problem')</script>";
+
+
+                        }
+
+}
+
+               
+?>
+

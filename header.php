@@ -194,7 +194,7 @@ element.style {
                 </ul>
               </li class="dropdown">
             <li class="dropdown">
-				<a href="marriagecouple.php">Marriage Couple</a>		
+				<a href="marriagecouple.php">Married Couple</a>		
 			</li class="dropdown">
 			<li class="dropdown">
 				<a href="staff.php">Staff</a>		

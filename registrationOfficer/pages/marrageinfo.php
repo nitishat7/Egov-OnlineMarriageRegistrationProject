@@ -1,3 +1,18 @@
+
+<?php  
+   session_start();
+   $d26=$_SESSION["Qid"] ;
+   
+   
+  if($_SESSION["Qid"]){
+
+  }
+  else{
+    echo '<script> location.replace("../../login.php"); </script>';
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,21 +24,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title> <link rel = "icon" href = 
+    <title>Registration Details</title> <link rel = "icon" href = 
 "np.png" 
         type = "image/x-icon">
-<?php  
-   session_start();
-   $admin=$_SESSION["admin"] ;
-   
-   
-  if($admin=='admin'){
 
-  }
-  else{
-    echo '<script> location.replace("../../adminlogin.php"); </script>';
-  }
-   ?>
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -53,7 +57,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <img src="admin.jpg" alt="" style="height:50px; width:50px;"><b>Admin Page <b><nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -72,30 +76,33 @@
             
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            <img src="np.png" alt="NP Govt" ><b>Civil Marriage Registration Officer <b><div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         </br>
                         <li>
-                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Details</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>  Registration Details</a>
                         </li>
-
+                       
                         <li>
-                            <a href="addQazi.php"><i class="fa fa-table fa-fw"></i> Staff Login </a>
-                        </li>
-                        <li>
-                            <a href="qazitable.php"><i class="fa fa-table fa-fw"></i> Staff Details </a>
-                        </li>
-                        <!-- <li>
-                            <a href="review.php"><i class="fa fa-table fa-fw"></i> Review Registration </a>
+                            <a href="marrageRegistration.php"><i class="fa fa-table fa-fw"></i> Marriage Registration </a>
+                        </li> <li>
+                            <a href="divorceRegistration.php"><i class="fa fa-table fa-fw"></i> Divorce  Application </a>
                         </li>
                         <li>
-                            <a href="divorceList.php"><i class="fa fa-table fa-fw"></i> Divorce List </a>
-                        </li> -->
+                            <a href="Registrationlist.php"><i class="fa fa-table fa-fw"></i> Registration List </a>
+                        </li>
+                        <li>
+                            <a href="DivorceRegistrationlist.php"><i class="fa fa-table fa-fw"></i> Divorce Application List </a>
+                        </li>
+                       
                         
-                        <li>
-                            <a href="logout.php"><i class="fa fa-table fa-fw"></i> LogOut </a>
+                       
+                        
+                         <li>
+                            <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> LogOut </a>
                         </li>
+                        
                         
                       
                        
@@ -108,7 +115,7 @@
     <div id="page-wrapper">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Registration Officer List</h1>
+                    <h1 class="page-header">Registration Details</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -117,64 +124,110 @@
         <h3 class="text-center text-success"></h3>
         <hr/>
 
-        <input type="text" id="myInput"  placeholder="Search for names.."  class="form-control">
+       
 
-<br>
-<table class="table table-bordered" >
-  <thead class="text-center">
-    <tr>
-      <th>Reg. No:</th>
-      <th>Registration Officer  Name</th>
-      <th> Registration Officer Email</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody id="myTable">
- 
-<?php 
+<table class="table table-hover table-bordered">
+
+<?php
+
 include "connection.php";
-$query=("select * from qazilist ");
-$result=mysqli_query($connection,$query);
-if ($result) {
-  while ($row = mysqli_fetch_array($result)) {
-$kazi_id=$row['id'];
 
-    echo "
-    <tr>
-      <td>".$row['RegID']."</td>
-      <td>".$row['name']."</td>
-      <td>".$row['email']."</td>
-      
-      
-      <td>
-                <a href='kaziInfo.php?kazi_id=$kazi_id' class='btn btn-info' title='Qazi Details View'>
-                    <span class='glyphicon glyphicon-eye-open'></span>
-                </a>
-                
-                
-            </td> 
-    </tr>
-  ";
+if(isset($_GET['marrage_id'])){
+  $registration_id = $_GET['marrage_id'];
+  /*$_SESSION["bikeid"]=$product_id;*/
+  /*echo $product_id;*/
   
+  $get_marrageinfo = "select * from marriagelist where id='$registration_id'";
+  
+  $run_marrageinfo = mysqli_query($connection, $get_marrageinfo);
+  
+    
+  while($row=mysqli_fetch_array($run_marrageinfo)){
+  
+  $registration_id=$row['id'];
+  $registration_sname=$row['d2'];
+  $registration_dname=$row['d4'];
+  $registration_date=$row['date'];
+  $registration_RegNo=$row['RegNo'];
+  $registration_ages=$row['d3'];
+  $registration_aged=$row['d6'];
+  $registration_dower=$row['13'];
+ 
+  
+
+  
+  echo "
+
+
+ 
+  
+  <tbody>
+    <tr>
+      <th>Marrage Registration Number </th>
+      <td>$registration_RegNo</td>
+     
+      
+    </tr>
+    <tr>
+      <th>Name of the bridegroom </th>
+      <td>$registration_sname</td>
+     
+      
+    </tr>
+    <tr>
+      <th>The name of the bride </th>
+      <td>$registration_dname</td>
+     
+      
+    </tr>
+    <tr>
+      <th>Marrage Date</th>
+      <td> $registration_date</td>
+      
+    </tr>
+    <tr>
+      <th>Age of Groom/Dulah</th>
+      
+      <td>$registration_ages</td>
+    </tr>
+    <tr>
+      <th>Age of the Bride/Dulahi</th>
+      
+    
+      <td>$registration_aged</td>
+    </tr>
+
+    <tr>
+      <th> Photo of the Groom/Dulah: </th>
+    
+      <td><img src='../../registrationOfficer/pages/".$row['photoH']."'width='100px' height='100px'/></td>
+     
+      
+    </tr>
+    <tr>
+      <th> Photo of the Bride/Dulahi: </th>
+      <td><img src='../../registrationOfficer/pages/".$row['photoW']."'width='100' height='100'/></td>
+     
+      
+    </tr>
+   
+  </tbody>
+
+  ";
+    
+  }
   }
   
-}
-else{
-  echo "<h6 >NO RECORD FOUND</h6>";
-}
+    
+  
+    
+    
+
+
 
 ?>
-
-
-
-
-
-
-
-
-  </tbody>
 </table>
-
+  
     </div>
 </div>
             
